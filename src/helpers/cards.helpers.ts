@@ -1,8 +1,8 @@
-import { IMAGES } from "@/MemoriaMain";
+
 import type { CardData } from "../types/cards.types";
 
 // Cada palabra genera dos cartas con el mismo pairId para identificar el par
-export function createDeck(words:string[]): CardData[] {
+export function createDeck(IMAGES:string[]): CardData[] {
     const cards = IMAGES.flatMap((image, index) => [
     {
         id: index * 2,

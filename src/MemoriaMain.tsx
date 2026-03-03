@@ -1,14 +1,21 @@
+import img1 from "./assets/1.png";
+import img2 from "./assets/2.png";
+import img3 from "./assets/3.png";
+import img4 from "./assets/4.png";
+import img5 from "./assets/5.webp";
+import img6 from "./assets/6.webp";
+
 import type { CardData } from "./types/cards.types";
 import { Card } from "./components/Card";
 import useCard from "./hooks/useCard";
 
 export const IMAGES: string[] = [
-    new URL("./assets/1.png", import.meta.url).href,
-    new URL("./assets/2.png", import.meta.url).href,
-    new URL("./assets/3.png", import.meta.url).href,
-    new URL("./assets/4.png", import.meta.url).href,
-    new URL("./assets/5.webp", import.meta.url).href,
-    new URL("./assets/6.webp", import.meta.url).href,
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
 ];
 
 export default function MemoryGame() {
