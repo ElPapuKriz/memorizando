@@ -1,18 +1,18 @@
 import { useState } from "react";
 import type { CardData } from "../types/cards.types";
-import { WORDS } from "../MemoriaMain";
+import { IMAGES } from "../MemoriaMain";
 import { createDeck } from "../helpers/cards.helpers";
 
 
 
 const useCard = () => {
-    const [deck, setDeck] = useState<CardData[]>(() => createDeck(WORDS));
+    const [deck, setDeck] = useState<CardData[]>(() => createDeck(IMAGES));
     const [flipped, setFlipped] = useState<number[]>([]);   // índices de cartas volteadas (máx 2)
     const [matched, setMatched] = useState<number[]>([]);   // pairIds ya emparejados
     const [moves, setMoves] = useState<number>(0);      // intentos realizados
     const [locked, setLocked] = useState<boolean>(false); // bloqueo mientras se evalúa el par
 
-    const totalPairs: number = WORDS.length;
+    const totalPairs: number = IMAGES.length;
     const score: number = matched.length;
     const gameWon: boolean = score === totalPairs;
 
@@ -58,7 +58,7 @@ const useCard = () => {
     // ── Reiniciar partida ──────────────────────────────────────────────────────
 
     function restart(): void {
-        setDeck(createDeck(WORDS));
+        setDeck(createDeck(IMAGES));
         setFlipped([]);
         setMatched([]);
         setMoves(0);

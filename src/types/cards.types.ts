@@ -1,7 +1,7 @@
 export interface CardData {
     id: number;
-    word: string;
     pairId: number;
+    image: string;
 }
 
 export interface CardProps {
